@@ -464,6 +464,16 @@ color: var(--black);
     }
 }
 
+@media (min-width: 1925px) {
+#card-izq{
+    margin-right: 120px;
+}
+    
+#card-der{
+    margin-left: 150px;
+}
+}
+
 .wp-container h2{
     padding-top: 130px;
     font-size: 2.6rem;
