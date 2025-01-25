@@ -517,6 +517,17 @@ color: var(--black);
     margin-left: 27px;
 }
 
+@media (min-width: 1293px) {
+    #card-izq{
+        margin-right: 60px;
+    }
+    
+    #card-der{
+        margin-left: 60px;
+    }
+    }
+
+
 .recomendado{
     position: absolute;
     width: 120px;
