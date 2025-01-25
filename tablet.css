@@ -1,0 +1,37 @@
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    margin: 1px -36px;
+}
+
+.slider-planes{
+    justify-content: center;  
+    justify-self: center;
+    width: max-content;
+}
+
+.slider-planes::-webkit-scrollbar{
+    display: none;
+}
+
+.main-productos {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.wp-container{
+    height: 38vh;
+}
+
+.main-tabla-container{
+    display: flex;
+    width: 930px;
+    margin: 0 auto;
+}
+
+.plan-card{
+    max-width: 463px;
+}
