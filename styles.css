@@ -537,6 +537,16 @@ color: var(--black);
     }
     }
 
+@media (min-width: 1925px) {
+    #card-izq{
+        margin-right: 120px;
+    }
+    
+    #card-der{
+        margin-left: 150px;
+    }
+    }
+
 
 .recomendado{
     position: absolute;
