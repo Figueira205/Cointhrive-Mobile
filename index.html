@@ -1,189 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cointhrive: gestiona tu dinero de la forma más eficiente. Información en tiempo real de tus cuentas bancarias, comparativa mensual de ingresos y gastos, y planes a tu medida.">
+    <meta name="theme-color" content="#0b0f14">
+    <title>Cointhrive - Gestiona tu dinero de la forma más eficiente</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cointhrive - Gestiona tu dinero de la forma más eficiente">
+    <meta property="og:description" content="Información en tiempo real de tus cuentas, comparativa de ingresos y gastos, y planes a tu medida.">
+    <meta property="og:image" content="ac/hero.webp">
+
+    <link rel="icon" href="./ac/ico_moneda.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="./tablet.css" media="(min-width: 930px)">
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="icon" href="./ac/ico_moneda.ico" type="image/x-icon">
-    <title>Cointhrive</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700;9..40,800&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="ac/hero.webp" type="image/webp">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1" defer></script>
 </head>
 
-<body>
-    <header>
-        <img src="./ac/logo_cointrive.png" alt="logo" style="width: 200px; align-self:center;margin-bottom:37px;">
-        <div class="header-title-container">
-            <h1>Gestiona tu dinero <br>de la forma más eficiente.</h1>
-            <p>
-                Con Cointhrive administrar tus finanzas <br> será mucho más fácil mientras  <br> aprendes en el proceso.
-            </p>
-            <a class="header-button" href="#planes">Suscribete ya<span></span> </a>
-        </div>
+<body class="is-loading">
+    <div class="progress" aria-hidden="true"></div>
+
+    <header class="nav" id="nav">
+        <a class="logo" href="#inicio" aria-label="Cointhrive, inicio"><span class="y">coin</span>thrive</a>
+        <nav class="nav__links" aria-label="Principal">
+            <a href="#movimientos">Movimientos</a>
+            <a href="#producto">Producto</a>
+            <a href="#planes">Planes</a>
+        </nav>
+        <a class="btn btn--sm" href="https://figueira205.github.io/Cointhrive/" data-magnetic><span>Ver demo</span></a>
     </header>
 
     <main>
-        <section class="main-container">
-            <div class="img-fondo"></div>
-                <div class="main-title-container"></div>
-                    <h2>Visualiza todos tus movimientos</h2>
-                    <p>Treaemos informacion en tiempo real <br> de tus cuentas bancarias</p>
+        <!-- Hero -->
+        <section id="inicio" class="hero">
+            <div class="hero__copy">
+                <h1 data-split>Gestiona tu dinero de la forma más eficiente.</h1>
+                <p class="hero__lead rv" style="--d:.8s">Con Cointhrive administrar tus finanzas será mucho más fácil mientras aprendes en el proceso.</p>
+                <div class="hero__cta rv" style="--d:.95s">
+                    <a class="btn btn--primary" href="#planes" data-magnetic><span>Suscríbete ya</span></a>
+                </div>
+            </div>
 
-            <section class="main-tabla-container">
-                <div class="main-tabla-gastos">
-                    <p class="titulo-gastos">Gastos</p>
-                    <div class="tabla-gastos">
-                        <table >
-                            <tr>
-                                <td class="izq-tabla l-site">Carrefour</td>
-                                <td class="der-tabla r-site">15.96$ <span class="down"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="l-site">Farmacia</td>
-                                <td class="r-site">22.05$ <span class="down"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="l-site">Uber</td>
-                                <td class="r-site">16.47$ <span class="down"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="izq-tabla2 l-site">Spotify</td>
-                                <td class="der-tabla2 r-site">3.99$ <span class="down"></span></td>
-                            </tr>
-                        </table>    
-                    </div>
-                        <div class="button-fecha">
-                            <p><b>Actualizado:</b> 19 Julio 2024</b></p>
+            <div class="hero__visual">
+                <div class="hero__photo" id="tilt">
+                    <img src="ac/hero.webp" alt="Mujer sonriendo sosteniendo dos monedas de bitcoin frente a sus ojos" width="960" height="1161" fetchpriority="high">
+                </div>
+                <div class="float float--a glass" aria-hidden="true">
+                    <span class="float__icon"><i class="ph-bold ph-arrow-down-left"></i></span>
+                    <span><small>Nómina</small><strong>+1.220,07 $</strong></span>
+                </div>
+                <div class="float float--b glass" aria-hidden="true">
+                    <span class="float__icon float__icon--out"><i class="ph-bold ph-arrow-up-right"></i></span>
+                    <span><small>Spotify</small><strong>-3,99 $</strong></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Movimientos -->
+        <section id="movimientos" class="moves">
+            <div class="wrap">
+                <h2 class="h2 rv">Visualiza todos tus movimientos</h2>
+                <p class="lead rv" style="--d:.08s">Traemos información en tiempo real de tus cuentas bancarias.</p>
+
+                <div class="moves__grid">
+                    <article class="panel rv" style="--d:.05s">
+                        <header><h3>Gastos</h3><span class="date">Actualizado: 19 Julio 2024</span></header>
+                        <ul class="rows">
+                            <li><span>Carrefour</span><b class="neg">15,96 $ <i class="ph-bold ph-arrow-up-right"></i></b></li>
+                            <li><span>Farmacia</span><b class="neg">22,05 $ <i class="ph-bold ph-arrow-up-right"></i></b></li>
+                            <li><span>Uber</span><b class="neg">16,47 $ <i class="ph-bold ph-arrow-up-right"></i></b></li>
+                            <li><span>Spotify</span><b class="neg">3,99 $ <i class="ph-bold ph-arrow-up-right"></i></b></li>
+                        </ul>
+                    </article>
+                    <article class="panel panel--in rv" style="--d:.15s">
+                        <header><h3>Ingresos</h3><span class="date">Actualizado: 21 Julio 2024</span></header>
+                        <ul class="rows">
+                            <li><span>Bizum</span><b class="pos">30,50 $ <i class="ph-bold ph-arrow-down-left"></i></b></li>
+                            <li><span>Nómina</span><b class="pos">1.220,07 $ <i class="ph-bold ph-arrow-down-left"></i></b></li>
+                            <li><span>Devolución</span><b class="pos">8,45 $ <i class="ph-bold ph-arrow-down-left"></i></b></li>
+                            <li><span>Transferencia</span><b class="pos">30,00 $ <i class="ph-bold ph-arrow-down-left"></i></b></li>
+                        </ul>
+                    </article>
+                </div>
+                <p class="note rv">Ejemplo con datos de demostración.</p>
+            </div>
+        </section>
+
+        <!-- Producto -->
+        <section id="producto" class="product">
+            <div class="wrap">
+                <h2 class="h2 rv">Creamos un producto sin comparación</h2>
+                <p class="lead rv" style="--d:.08s">Confiable y diseñado para su uso diario.</p>
+
+                <div class="bento">
+                    <article class="cell cell--live rv" style="--d:.05s">
+                        <i class="ph-bold ph-clock cell__ico"></i>
+                        <h3>Tiempo real</h3>
+                        <p>Nuestra API toma información minuto a minuto de tus entidades bancarias.</p>
+                        <img class="cell__coin" src="ac/coin.webp" alt="" width="503" height="503" loading="lazy">
+                    </article>
+                    <article class="cell cell--yellow rv" style="--d:.12s">
+                        <i class="ph-bold ph-eye cell__ico"></i>
+                        <h3>Monitores las 24 horas</h3>
+                        <p>Siempre te mostraremos la realidad de tus cuentas, tú decides si mediante gráficas o usando nuestro chat.</p>
+                    </article>
+                    <article class="cell cell--chart rv" style="--d:.05s">
+                        <i class="ph-bold ph-currency-dollar cell__ico"></i>
+                        <h3>Compara tus movimientos</h3>
+                        <p>Compara lo que ingresas y gastas cada mes de la mejor forma posible.</p>
+                        <div class="minibars" aria-hidden="true">
+                            <span style="--h:46%"></span><span class="g" style="--h:28%"></span>
+                            <span style="--h:40%"></span><span class="g" style="--h:34%"></span>
+                            <span style="--h:52%"></span><span class="g" style="--h:38%"></span>
+                            <span style="--h:36%"></span><span class="g" style="--h:30%"></span>
                         </div>
-                </div>
-            
-
-            
-                <div class="main-tabla-ingresos">
-                    <p class="titulo-ingresos">Ingresos</p>
-                    <div class="tabla-ingresos">
-                        <table >
-                            <tr>
-                                <td class="izq-tabla l-site">Bizum</td>
-                                <td class="der-tabla r-site">30.50$ <span class="up"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="l-site">Nomina</td>
-                                <td class="r-site">1220.07$ <span class="up"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="l-site">Devolucion</td>
-                                <td class="r-site">8.45$ <span class="up"></span></td>
-                            </tr>
-                            <tr>
-                                <td class="izq-tabla2 l-site">Transferencia</td>
-                                <td class="der-tabla2 r-site">30.00$ <span class="up"></span></td>
-                            </tr>
-                        </table>    
-                    </div>
-                        <div class="button-fecha2">
-                            <p><b>Actualizado:</b> 21 Julio 2024</b></p>
-                        </div>
-                </div>
-            </section>
-
-        </section>
-
-        <section class="main-productos">
-            <span class="logito"></span>
-            <div class="titulo-detalles">
-                <h2>Creamos un producto <br> sin comparación</h2>
-                <p>Confiable y diseñado para su uso diario</p>
-            </div>
-            <section class="cards-container">
-                <article id="card-izq" class="cards-detalles">
-                    <span class="reloj"></span>
-                        <p class="titulo-card">Tiempo real</p>
-                        <p class="body-card">Nuestra API toma informacion minuto a minuto de tus entidades Bancarias</p>
-                </article>
-            </section>
-
-            <section class="cards-container">
-                <article id="card-der" class="cards-detalles">
-                    <span class="ojo"></span>
-                        <p class="titulo-card">Monitores las 24 Horas</p>
-                        <p class="body-card">Siempre te mostraremos la realidad de tus cuentas, tu decides si mediante graficas o usando nuestro chat</p>
-                </article>
-            </section>
-
-            <section class="cards-container">
-                <article id="card-izq" class="cards-detalles">
-                    <span class="dolar"></span>
-                        <p class="titulo-card">Compara tus movimientos</p>
-                        <p class="body-card">En Cointhrive podras comparar lo que ingresas y gastas cada mes de la mejor forma forma posible</p>
-                </article>
-            </section>
-
-            <section class="cards-container">
-                <article id="card-der"  class="cards-detalles">
-                    <span class="check"></span>
-                        <p class="titulo-card">Informacion confiable</p>
-                        <p class="body-card">Nuestras fuentes estan 100% verificadas y continuamos auditando su contenido mientras se actualiza</p>
-                </article>
-            </section>
-        </section>
-
-        <section class="wp-container">
-            <h2>Conócelo Hoy.</h2>
-        </section>
-    
-        
-        <section id="planes" class="main-planes-container">
-            <div class="titulo-planes">
-                <h2>Escoge el plan que mejor <br> se ajuste a ti</h2>
-                <p>Cualquier plan te da acceso completo a <br> nuestra plataforma</p>
-            </div>
-
-    	    <div class="slider-planes">
-                <div id="plan-card1" class="plan-card">
-                    <p  id="recomendado" class="recomendado">Recomendando</p>
-                    <div class="info-container"></div>
-                    <h3 class="plan-card-title">Pago Anual</h3>
-                    <p class="plan-card-price"><span>$</span>99</p>
-                    <p class="plan-card-saving">*Ahorras $129 comparado <br>al plan mensual.</p>
-                    <button class="plan-card-ca">Escoge este<span></span></button>
-                </div>
-        
-                <div class="plan-card">
-                    <p id="recomendado2" class="recomendado">Basico</p>
-                    <div class="info-container"></div>
-                    <h3 class="plan-card-title">Pago Anual</h3>
-                    <p class="plan-card-price"><span>$</span>19</p>
-                    <p class="plan-card-saving">Plan basico aunque con<br>todas las ventajas.</p>
-                    <button class="plan-card-ca">Escoge este<span></span></button>
-                </div>
-        
-                <div id="plan-card3" class="plan-card">
-                    <p id="recomendado3" class="recomendado">Permanente</p>
-                    <div class="info-container"></div>
-                    <h3 class="plan-card-title">Pago Unico</h3>
-                    <p class="plan-card-price"><span>$</span>299</p>
-                    <p class="plan-card-saving">Con este plan solo tienes que hacer un solo pago y lo tendra de por vida</p>
-                    <button class="plan-card-ca">Escoge este<span></span></button>
+                    </article>
+                    <article class="cell cell--trust rv" style="--d:.12s">
+                        <i class="ph-bold ph-seal-check cell__ico"></i>
+                        <h3>Información confiable</h3>
+                        <p>Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualiza.</p>
+                        <i class="ph-fill ph-seal-check cell__big" aria-hidden="true"></i>
+                    </article>
                 </div>
             </div>
         </section>
-    </div>
-</main>
-    <footer>
-        <section class="footer-izquierda">
-            <ul>
-                <li> <a href="#">Linkedin</a></li>
-                <li> <a href="#">Crunchbase</a></li>
-                <li> <a href="#">Hackernews</a></li>
-            </ul>
+
+        <!-- Conócelo -->
+        <section class="know">
+            <div class="wrap know__inner">
+                <h2 class="h2 know__title" data-split>Conócelo hoy.</h2>
+                <a class="btn btn--primary" href="https://figueira205.github.io/Cointhrive/" data-magnetic><span>Ver demo</span></a>
+            </div>
         </section>
-        <section class="footer-derecha">
-            <img src="./ac/logo_cointrive.png" alt="logo">
+
+        <!-- Planes -->
+        <section id="planes" class="plans">
+            <div class="wrap">
+                <h2 class="h2 rv">Escoge el plan que mejor se ajuste a ti</h2>
+                <p class="lead rv" style="--d:.08s">Cualquier plan te da acceso completo a nuestra plataforma.</p>
+
+                <div class="plans__grid">
+                    <article class="plan plan--rec rv" style="--d:.05s">
+                        <span class="pill">Recomendado</span>
+                        <h3>Pago Anual</h3>
+                        <p class="price"><sup>$</sup><span data-count="99">99</span></p>
+                        <p class="plan__text">Ahorras $129 comparado al plan mensual.</p>
+                        <button class="btn btn--dark" type="button" data-magnetic><span>Escoger plan</span></button>
+                    </article>
+                    <article class="plan rv" style="--d:.12s">
+                        <span class="pill pill--ghost">Básico</span>
+                        <h3>Pago Mensual</h3>
+                        <p class="price"><sup>$</sup><span data-count="19">19</span></p>
+                        <p class="plan__text">Plan básico, aunque con todas las ventajas.</p>
+                        <button class="btn" type="button" data-magnetic><span>Escoger plan</span></button>
+                    </article>
+                    <article class="plan rv" style="--d:.19s">
+                        <span class="pill pill--ghost">Permanente</span>
+                        <h3>Pago Único</h3>
+                        <p class="price"><sup>$</sup><span data-count="299">299</span></p>
+                        <p class="plan__text">Un solo pago y lo tendrás de por vida.</p>
+                        <button class="btn" type="button" data-magnetic><span>Escoger plan</span></button>
+                    </article>
+                </div>
+            </div>
         </section>
+    </main>
+
+    <footer class="footer">
+        <div class="wrap footer__row">
+            <a class="logo" href="#inicio" aria-label="Cointhrive, inicio"><span class="y">coin</span>thrive</a>
+            <p>&copy; 2026 Cointhrive. Proyecto de demostración.</p>
+        </div>
     </footer>
+
+    <script src="main.js" defer></script>
 </body>
 </html>
